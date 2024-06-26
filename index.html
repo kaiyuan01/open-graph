@@ -88,9 +88,9 @@ shareButton.addEventListener("click", (e) => {
   console.log("Share button clicked!");
   if (navigator.share) {
     navigator.share({
-        title: 'Web Share API Draft',
-        text: 'Take a look at this spec!',
-        url: 'https://wicg.github.io/web-share/#share-method',
+        title: 'Create your own account!',
+        text: 'Easily access your info and request services',
+        url: 'https://member.bluecrossma.com/register/register-now?invite={uuid}',
       })      .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
   } else {
