@@ -62,6 +62,30 @@
 </ul>
 </section>
 </div>
+
+  <P>
+  <div id="answer-example-share-button"> </div>
+  ...
+  </P>
+  
+      <script>
+    const shareButton = document.getElementById("answer-example-share-button"); 
+shareButton.addEventListener("click", (e) => { 
+  if (navigator.share) {
+    navigator.share({
+        title: 'Web Share API Draft',
+        text: 'Take a look at this spec!',
+        url: 'https://wicg.github.io/web-share/#share-method',
+      })      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  } else {
+    console.log('Share not supported on this browser, do it the old way.');
+  }
+});
+  </script>
+<button id='answer-example-share-button'>Share!</button>
+    
+ 
 <footer style="text-align:center">by <a rel="author" href="http://www.niallkennedy.com/">Niall Kennedy</a></footer>
 </body>
 </html>
