@@ -70,6 +70,7 @@
   
       <script>
     const shareButton = document.getElementById("answer-example-share-button"); 
+        
 shareButton.addEventListener("click", (e) => { 
   console.log("Share button clicked!");
   if (navigator.share) {
@@ -86,7 +87,15 @@ shareButton.addEventListener("click", (e) => {
   </script>
 <button id='answer-example-share-button'>Share!</button>
     
- 
+ ...
+  <script type="module" src="share-button.js"></script>
+
+<br>
+  
+<share-button>
+  <button>ShareButton</button>
+</share-button>
+  
 <footer style="text-align:center">by <a rel="author" href="http://www.niallkennedy.com/">Niall Kennedy</a></footer>
 </body>
 </html>
